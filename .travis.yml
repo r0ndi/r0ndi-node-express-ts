@@ -1,0 +1,10 @@
+language: node_js
+node_js:
+- lts/*
+script:
+- npm run lint
+branches:
+  only:
+  - master
+deploy:
+  provider: heroku

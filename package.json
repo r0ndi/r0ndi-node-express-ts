@@ -1,0 +1,49 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "description": "Przykładowy opis",
+  "main": "dist/server.js",
+  "scripts": {
+    "build-ts": "tsc",
+    "watch-ts": "tsc -w",
+    "start": "ts-node ./src/server.ts",
+    "serve": "node dist/server.js",
+    "watch-node": "nodemon dist/server.js",
+    "lint": "tslint -p tsconfig.json -c tslint.json",
+    "typeorm:cli": "ts-node ./node_modules/typeorm/cli -f ./src/configs/orm.config.ts",
+    "typeorm:run": "npm run typeorm:cli -- migration:run"
+  },
+  "author": "sadelkonrad@gmail.com",
+  "license": "MIT",
+  "dependencies": {
+    "@types/express": "^4.17.9",
+    "bcrypt": "^5.0.0",
+    "body-parser": "^1.19.0",
+    "class-transformer": "^0.3.1",
+    "class-validator": "^0.12.2",
+    "cookie-parser": "^1.4.5",
+    "dotenv": "^8.2.0",
+    "envalid": "^6.0.2",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongodb": "^3.6.3",
+    "mongoose": "^5.11.10",
+    "pg": "^8.5.1",
+    "reflect-metadata": "^0.1.13",
+    "ts-node": "^9.1.1",
+    "typeorm": "^0.2.29"
+  },
+  "devDependencies": {
+    "@types/bcrypt": "^3.0.0",
+    "@types/cookie-parser": "^1.4.2",
+    "@types/jest": "^26.0.20",
+    "@types/jsonwebtoken": "^8.5.0",
+    "@types/supertest": "^2.0.10",
+    "jest": "^26.6.3",
+    "nodemon": "^1.18.4",
+    "supertest": "^6.0.1",
+    "ts-jest": "^26.4.4",
+    "tslint": "^5.11.0",
+    "typescript": "^3.0.3"
+  }
+}
